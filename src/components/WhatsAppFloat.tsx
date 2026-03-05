@@ -63,14 +63,6 @@ export default function WhatsAppFloat() {
 
                     {/* Icon */}
                     <MessageCircle className="w-8 h-8 relative z-10 group-hover:rotate-12 transition-transform duration-300" />
-
-                    {/* Notification Badge with pulse */}
-                    <div className="absolute -top-1 -right-1 z-20">
-                        <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-xs font-bold border-3 border-white shadow-lg animate-pulse">
-                            1
-                        </div>
-                        <div className="absolute inset-0 bg-red-500 rounded-full animate-ping opacity-75"></div>
-                    </div>
                 </button>
             </div>
         </>
