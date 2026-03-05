@@ -15,9 +15,7 @@ const projects = [
   {
     title: 'ABSMD – Construction Platform',
     description: 'Medical billing company in GA — 99% first-pass rate, HIPAA compliant, credentialing & coding services, and 24/7 support for healthcare providers.',
-    // ✏️ Replace with your PNG: '/images/absmd.png'  OR  import absmdImg and use it here
     image: '/absmd.png',
-    fallback: 'https://images.pexels.com/photos/3888151/pexels-photo-3888151.jpeg?auto=compress&cs=tinysrgb&w=800',
     github: 'https://github.com/Hassan-Omar03',
     live: 'https://absmd.us/',
     badge: 'Live',
@@ -27,7 +25,6 @@ const projects = [
     title: 'BIM Quotation System',
     description: 'Instant website pricing tool with real-time calculations, customizable templates, and seamless client communication for construction project quotes.',
     image: '/quotation.png',
-    fallback: 'https://images.pexels.com/photos/3965857/pexels-photo-3965857.jpeg?auto=compress&cs=tinysrgb&w=800',
     github: 'https://github.com/Hassan-Omar03',
     live: 'https://quotation.bim.africa/',
     badge: 'Live',
@@ -37,7 +34,6 @@ const projects = [
     title: 'BIM Africa Main Portal',
     description: 'Digital agency — web dev, SEO, social media, 3D animation.',
     image: '/bim.png',
-    fallback: 'https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800',
     github: 'https://github.com/Hassan-Omar03',
     live: 'https://www.bim.africa/',
     badge: 'Live',
@@ -47,7 +43,6 @@ const projects = [
     title: 'Mauritius Travel Tour',
     description: 'Island tour & travel booking platform with destination guides, itinerary builder, online reservations, and customer reviews for Mauritius tourism.',
     image: '/travel.png',
-    fallback: 'https://images.pexels.com/photos/4393021/pexels-photo-4393021.jpeg?auto=compress&cs=tinysrgb&w=800',
     github: 'https://github.com/Hassan-Omar03',
     live: 'https://maurituistraveltour.com/',
     badge: 'Live',
@@ -57,18 +52,15 @@ const projects = [
     title: 'Flash Wash Mauritius',
     description: 'Automatic tunnel car wash in Mauritius — Basic / Radiant Wax / Ultimate Glow packages ',
     image: '/flash.png',
-    fallback: 'https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=800',
     github: 'https://github.com/Hassan-Omar03',
     live: 'https://flashwash.mu/',
     badge: 'Live',
     color: 'from-cyan-500 to-blue-600',
   },
-  
   {
     title: 'Hoda Shine Services',
     description: 'Cleaning service in Ajman UAE — Dubai, Sharjah, Ajman coverage, eco-friendly cleaning, and 24/7 support.',
     image: '/hoda.png',
-    fallback: 'https://images.pexels.com/photos/6147179/pexels-photo-6147179.jpeg?auto=compress&cs=tinysrgb&w=800',
     github: 'https://github.com/Hassan-Omar03',
     live: 'https://hodashineservices.com/',
     badge: 'Live',
@@ -78,7 +70,6 @@ const projects = [
     title: 'Hawar Homes Real Estate',
     description: 'Dubai DET-licensed luxury vacation rentals, Burj Khalifa view apartments, and 24/7 support for property owners.',
     image: '/hawar.png',
-    fallback: 'https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800',
     github: 'https://github.com/Hassan-Omar03',
     live: 'https://hawarhomes.com/',
     badge: 'Live',
@@ -88,7 +79,6 @@ const projects = [
     title: 'Digitals Universe Portfolio',
     description: 'Digital agency portfolio showcasing web development, design, and marketing services with project showcase and contact integration.',
     image: '/digitals.png',
-    fallback: 'https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800',
     github: 'https://github.com/Hassan-Omar03',
     live: 'https://digitals-universe.vercel.app/',
     badge: 'Live',
@@ -98,27 +88,12 @@ const projects = [
     title: 'Construction Management App',
     description: 'Enterprise-level construction management website with project tracking, resource management, and team collaboration features.',
     image: '/construction.png',
-    fallback: 'https://images.pexels.com/photos/3862363/pexels-photo-3862363.jpeg?auto=compress&cs=tinysrgb&w=800',
     github: 'https://github.com/Hassan-Omar03',
     live: 'https://construction-mu-sandy.vercel.app/',
     badge: 'Live',
     color: 'from-orange-500 to-red-500',
   },
 ];
-
-// Smart image component: shows your PNG, falls back to Pexels if not found
-function ProjectImage({ src, fallback, alt }: { src: string; fallback: string; alt: string }) {
-  const [imgSrc, setImgSrc] = useState(src);
-
-  return (
-    <img
-      src={imgSrc}
-      alt={alt}
-      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
-      onError={() => setImgSrc(fallback)}  // auto-fallback to Pexels if PNG not found
-    />
-  );
-}
 
 export default function Projects() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -164,10 +139,10 @@ export default function Projects() {
             >
               {/* Image */}
               <div className="relative overflow-hidden h-44">
-                <ProjectImage
+                <img
                   src={project.image}
-                  fallback={project.fallback}
                   alt={project.title}
+                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
                 {/* Image overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#080f1e] via-[#080f1e]/50 to-transparent" />
@@ -192,8 +167,6 @@ export default function Projects() {
                 <p className="text-slate-500 text-sm leading-relaxed mb-4 line-clamp-2">
                   {project.description}
                 </p>
-
-              
 
                 {/* Links */}
                 <div className="flex items-center justify-between pt-3 border-t border-white/5">
