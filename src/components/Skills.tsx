@@ -84,7 +84,7 @@ const categories = [
 ];
 
 const coreStats = [
-  { val: '3+', label: 'Years Experience' },
+  { val: '1', label: 'Year Experience' },
   { val: '10+', label: 'Projects Delivered' },
   { val: '5+', label: 'Countries Served' },
   { val: '100%', label: 'Client Satisfaction' },
@@ -95,7 +95,7 @@ export default function Skills() {
   const visible = useInView(sectionRef);
 
   return (
-    <section id="skills" className="py-16 md:py-24 bg-[#050d1a] text-white relative overflow-hidden" ref={sectionRef}>
+    <section id="skills" className="py-14 md:py-20 bg-[#050d1a] text-white relative overflow-hidden" ref={sectionRef}>
       {/* Background */}
       <div className="absolute inset-0 grid-pattern opacity-40" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-600/5 rounded-full filter blur-[120px]" />
@@ -104,7 +104,7 @@ export default function Skills() {
       <div className="container mx-auto px-4 sm:px-6 relative z-10">
 
         {/* Header */}
-        <div className={`text-center mb-12 md:mb-16 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`text-center mb-8 md:mb-12 transition-all duration-700 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <p className="section-label mb-3">EXPERTISE</p>
           <h2 className="text-3xl md:text-5xl font-bold">
             Technical <span className="gradient-text-animated">Skills</span>
@@ -115,11 +115,11 @@ export default function Skills() {
         </div>
 
         {/* Stats Row */}
-        <div className={`grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto mb-12 md:mb-16 transition-all duration-700 delay-100 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
+        <div className={`grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto mb-8 md:mb-12 transition-all duration-700 delay-100 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}>
           {coreStats.map((s) => (
-            <div key={s.label} className="glass-card rounded-xl p-4 border border-white/5 text-center hover:border-white/10 transition-colors">
-              <p className="text-2xl sm:text-3xl font-bold gradient-text-animated">{s.val}</p>
-              <p className="text-slate-500 text-xs mt-1">{s.label}</p>
+            <div key={s.label} className="glass-card rounded-xl p-3 sm:p-4 border border-white/5 text-center hover:border-white/10 hover:bg-white/[0.03] transition-all duration-300 group">
+              <p className="text-xl sm:text-2xl font-bold gradient-text-animated group-hover:scale-110 transition-transform inline-block">{s.val}</p>
+              <p className="text-slate-500 text-xs mt-0.5 leading-tight">{s.label}</p>
             </div>
           ))}
         </div>
@@ -162,7 +162,7 @@ export default function Skills() {
         </div>
 
         {/* Bottom Strip */}
-        <div className={`mt-10 md:mt-14 max-w-5xl mx-auto transition-all duration-700 delay-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
+        <div className={`mt-8 md:mt-10 max-w-5xl mx-auto transition-all duration-700 delay-500 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <div className="glass-card rounded-2xl border border-white/5 p-5 sm:p-8">
             <p className="section-label text-center mb-6">ALSO PROFICIENT IN</p>
             <div className="grid sm:grid-cols-3 gap-5 sm:gap-6">
