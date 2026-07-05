@@ -72,7 +72,7 @@ export default function Contact() {
 
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6 lg:gap-12">
 
-          {/* ── LEFT ── */}
+          {/* LEFT */}
           <div className={`space-y-4 transition-all duration-700 delay-100 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <div className="glass-card rounded-2xl p-5 sm:p-8 border border-white/5">
               <h3 className="text-xl sm:text-2xl font-bold mb-2 text-white">Ready for your next project?</h3>
@@ -82,7 +82,6 @@ export default function Contact() {
                 I deliver on time with clean, maintainable code.
               </p>
 
-              {/* Availability */}
               <div className="flex items-center gap-3 p-3 sm:p-4 bg-emerald-500/8 border border-emerald-500/20 rounded-xl mb-5">
                 <div className="relative flex-shrink-0">
                   <div className="w-2.5 h-2.5 bg-emerald-400 rounded-full" />
@@ -94,7 +93,6 @@ export default function Contact() {
                 </div>
               </div>
 
-              {/* Contact cards */}
               <div className="space-y-2.5">
                 {contactItems.map((item, i) => {
                   const inner = (
@@ -112,13 +110,7 @@ export default function Contact() {
                     </div>
                   );
                   return item.href ? (
-                    <a
-                      key={i}
-                      href={item.href}
-                      {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
-                    >
-                      {inner}
-                    </a>
+                    <a key={i} href={item.href} {...(item.external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}>{inner}</a>
                   ) : (
                     <div key={i}>{inner}</div>
                   );
@@ -127,10 +119,8 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* ── RIGHT ── */}
+          {/* RIGHT */}
           <div className={`space-y-4 transition-all duration-700 delay-200 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
-
-            {/* Social + CV card */}
             <div className="glass-card rounded-2xl p-5 sm:p-8 border border-white/5 space-y-3">
               <h4 className="text-lg sm:text-xl font-bold mb-4">Connect with me</h4>
 
@@ -176,7 +166,6 @@ export default function Contact() {
                 <ExternalLink className="w-4 h-4 text-slate-600 group-hover:text-emerald-400 group-hover:translate-x-1 transition-all" />
               </a>
 
-              {/* Download CV */}
               <a
                 href="/Hassan_Omar_CV.pdf"
                 download="Mohammad_Hassan_CV.pdf"
@@ -190,7 +179,6 @@ export default function Contact() {
               </a>
             </div>
 
-            {/* Quick facts card */}
             <div className="glass-card rounded-2xl p-5 sm:p-6 border border-white/5">
               <p className="text-slate-500 text-xs font-semibold uppercase tracking-widest mb-4">Quick Facts</p>
               <div className="grid grid-cols-2 gap-3">
@@ -208,7 +196,6 @@ export default function Contact() {
                 ))}
               </div>
             </div>
-
           </div>
         </div>
 
@@ -220,6 +207,9 @@ export default function Contact() {
               © {new Date().getFullYear()} Mohammad Hassan — Full Stack MERN Developer
             </p>
           </div>
+          <a href="/privacy-policy" className="inline-block mt-3 text-slate-500 hover:text-blue-400 text-xs font-medium transition-colors">
+            Privacy Policy
+          </a>
         </div>
 
       </div>

@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ExternalLink, Github, Globe } from 'lucide-react';
+import { Github, Globe, ExternalLink } from 'lucide-react';
 
 function useInView(ref: React.RefObject<Element>, threshold = 0.1) {
   const [visible, setVisible] = useState(false);
@@ -144,18 +144,13 @@ export default function Projects() {
                   alt={project.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                 />
-                {/* Image overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#080f1e] via-[#080f1e]/50 to-transparent" />
-
-                {/* Live badge */}
                 <div className="absolute top-3 right-3">
                   <span className="flex items-center gap-1.5 px-2.5 py-1 bg-emerald-500/20 border border-emerald-500/30 rounded-full text-emerald-400 text-xs font-medium backdrop-blur-sm">
                     <span className="w-1.5 h-1.5 bg-emerald-400 rounded-full animate-pulse" />
                     {project.badge}
                   </span>
                 </div>
-
-                {/* Color accent top bar */}
                 <div className={`absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r ${project.color}`} />
               </div>
 
@@ -167,8 +162,6 @@ export default function Projects() {
                 <p className="text-slate-500 text-sm leading-relaxed mb-4 line-clamp-2">
                   {project.description}
                 </p>
-
-                {/* Links */}
                 <div className="flex items-center justify-between pt-3 border-t border-white/5">
                   <a href={project.github} target="_blank" rel="noopener noreferrer"
                     className="flex items-center gap-1.5 text-slate-500 hover:text-white transition-colors text-xs font-medium group/link">

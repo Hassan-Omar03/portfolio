@@ -9,8 +9,6 @@ export default function Navigation() {
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-
-      // Update active section based on scroll position
       const sections = ['home', 'about', 'skills', 'projects', 'contact'];
       for (const id of [...sections].reverse()) {
         const el = document.getElementById(id);
@@ -57,11 +55,7 @@ export default function Navigation() {
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-18 py-4">
 
-            {/* Logo */}
-            <button
-              onClick={() => scrollTo('home')}
-              className="flex items-center gap-2.5 group"
-            >
+            <button onClick={() => scrollTo('home')} className="flex items-center gap-2.5 group">
               <div className="relative p-2 rounded-xl bg-gradient-to-br from-blue-600 to-teal-500 shadow-lg group-hover:shadow-blue-500/40 transition-shadow">
                 <Code2 className="w-5 h-5 text-white group-hover:rotate-12 transition-transform duration-300" />
               </div>
@@ -70,7 +64,6 @@ export default function Navigation() {
               </span>
             </button>
 
-            {/* Desktop Nav */}
             <div className="hidden md:flex items-center gap-1">
               {navLinks.map(link => (
                 <button
@@ -89,7 +82,6 @@ export default function Navigation() {
               ))}
             </div>
 
-            {/* Desktop CTA */}
             <div className="hidden md:block">
               <a
                 href="/Hassan_Omar_CV.pdf"
@@ -100,7 +92,6 @@ export default function Navigation() {
               </a>
             </div>
 
-            {/* Hamburger */}
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="md:hidden p-2.5 glass-card rounded-xl border border-white/10 text-white hover:border-blue-400/40 transition-all"
@@ -112,25 +103,14 @@ export default function Navigation() {
         </div>
       </nav>
 
-      {/* Mobile overlay */}
       {isOpen && (
         <>
-          <div
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden animate-fade-in"
-            onClick={() => setIsOpen(false)}
-          />
+          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden animate-fade-in" onClick={() => setIsOpen(false)} />
           <div className="fixed top-0 right-0 bottom-0 w-72 bg-[#080f1e]/98 backdrop-blur-xl z-50 md:hidden border-l border-white/5 shadow-2xl animate-slide-in-right">
             <div className="flex flex-col h-full p-6 pt-20">
-
-              {/* Close btn */}
-              <button
-                onClick={() => setIsOpen(false)}
-                className="absolute top-5 right-5 p-2 glass-card rounded-xl border border-white/10 text-white hover:border-white/20 transition-all"
-              >
+              <button onClick={() => setIsOpen(false)} className="absolute top-5 right-5 p-2 glass-card rounded-xl border border-white/10 text-white hover:border-white/20 transition-all">
                 <X className="w-5 h-5" />
               </button>
-
-              {/* Links */}
               <div className="flex-1 space-y-1">
                 <p className="section-label mb-4 px-2">Navigation</p>
                 {navLinks.map((link, i) => (
@@ -148,8 +128,6 @@ export default function Navigation() {
                   </button>
                 ))}
               </div>
-
-              {/* Download CV mobile */}
               <div className="pt-6 border-t border-white/5">
                 <a
                   href="/Hassan_Omar_CV.pdf"

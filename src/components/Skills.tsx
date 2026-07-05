@@ -166,7 +166,6 @@ export default function Skills() {
               className={`group premium-card rounded-2xl p-5 border ${cat.border} hover:bg-white/[0.05] hover:-translate-y-1 hover:shadow-xl ${cat.glow} transition-all duration-300 ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
               style={{ transitionDelay: `${ci * 80 + 200}ms`, transition: 'all 0.5s ease' }}
             >
-              {/* Card Header */}
               <div className="flex items-center gap-3 mb-4">
                 <div className={`p-2.5 rounded-xl bg-gradient-to-br ${cat.gradient} text-white shadow-lg flex-shrink-0 group-hover:scale-110 transition-transform`}>
                   {cat.icon}
@@ -178,8 +177,6 @@ export default function Skills() {
                   <p className="text-slate-600 text-xs">{cat.skills.length} technologies</p>
                 </div>
               </div>
-
-              {/* Skill Tags */}
               <div className="flex flex-wrap gap-1.5">
                 {cat.skills.map((skill) => (
                   <span

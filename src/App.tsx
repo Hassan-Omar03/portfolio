@@ -5,8 +5,13 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import WhatsAppFloat from './components/WhatsAppFloat';
+import PrivacyPolicy from './components/PrivacyPolicy';
 
 function App() {
+  if (window.location.pathname === '/privacy-policy') {
+    return <PrivacyPolicy />;
+  }
+
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -23,4 +28,3 @@ function App() {
 }
 
 export default App;
-
