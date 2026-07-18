@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+﻿import { useEffect, useRef, useState } from 'react';
 import { Mail, MapPin, Github, Linkedin, MessageCircle, Download, ExternalLink, Phone, Globe } from 'lucide-react';
 
 function useInView(ref: React.RefObject<Element>, threshold = 0.1) {
@@ -17,12 +17,12 @@ export default function Contact() {
 
   const contactItems = [
     {
-      href: 'mailto:hassanomar7674@gmail.com',
+      href: 'mailto:info@hassanomar.site',
       icon: <Mail className="w-5 h-5 text-blue-400" />,
       bg: 'from-blue-500/20 to-blue-600/10',
       border: 'hover:border-blue-400/50 hover:shadow-blue-500/20',
       label: 'Email',
-      value: 'hassanomar7674@gmail.com',
+      value: 'info@hassanomar.site',
     },
     {
       href: 'https://wa.me/923247305909',
@@ -46,7 +46,7 @@ export default function Contact() {
       bg: 'from-cyan-500/20 to-cyan-600/10',
       border: 'border-white/5',
       label: 'Location',
-      value: 'Punjab, Pakistan · Remote Ready',
+      value: 'Punjab, Pakistan Â· Remote Ready',
     },
   ];
 
@@ -66,7 +66,7 @@ export default function Contact() {
             Let's Work <span className="gradient-text-animated">Together</span>
           </h2>
           <p className="text-slate-500 mt-4 text-sm md:text-base max-w-md mx-auto px-4">
-            Ready to bring your ideas to life? Whether it's a new project, freelance gig, or collaboration — I'm all ears.
+            Ready to bring your ideas to life? Whether it's a new project, freelance gig, or collaboration â€” I'm all ears.
           </p>
         </div>
 
@@ -78,7 +78,7 @@ export default function Contact() {
               <h3 className="text-xl sm:text-2xl font-bold mb-2 text-white">Ready for your next project?</h3>
               <p className="text-slate-400 leading-relaxed mb-5 text-sm sm:text-base">
                 I'm passionate about building high-quality websites that solve real problems.
-                Whether you need a full-stack website, a frontend redesign, or backend optimisation —
+                Whether you need a full-stack website, a frontend redesign, or backend optimisation â€”
                 I deliver on time with clean, maintainable code.
               </p>
 
@@ -183,10 +183,10 @@ export default function Contact() {
               <p className="text-slate-500 text-xs font-semibold uppercase tracking-widest mb-4">Quick Facts</p>
               <div className="grid grid-cols-2 gap-3">
                 {[
-                  { icon: '🌍', label: 'Remote Friendly', val: '100%' },
-                  { icon: '⏱️', label: 'Response Time', val: '< 24 hrs' },
-                  { icon: '🚀', label: 'Projects Done', val: '10+' },
-                  { icon: '⭐', label: 'Satisfaction', val: '100%' },
+                  { icon: 'ðŸŒ', label: 'Remote Friendly', val: '100%' },
+                  { icon: 'â±ï¸', label: 'Response Time', val: '< 24 hrs' },
+                  { icon: 'ðŸš€', label: 'Projects Done', val: '10+' },
+                  { icon: 'â­', label: 'Satisfaction', val: '100%' },
                 ].map(f => (
                   <div key={f.label} className="text-center glass-card rounded-xl p-3 border border-white/5 hover:border-blue-400/20 transition-colors">
                     <div className="text-xl mb-1">{f.icon}</div>
@@ -204,7 +204,7 @@ export default function Contact() {
           <div className="flex items-center justify-center gap-2">
             <Globe className="w-4 h-4 text-blue-400" />
             <p className="text-slate-400 text-sm font-medium">
-              © {new Date().getFullYear()} Mohammad Hassan — Full Stack MERN Developer
+              Â© {new Date().getFullYear()} Mohammad Hassan â€” Full Stack MERN Developer
             </p>
           </div>
           <a href="/privacy-policy" className="inline-block mt-3 text-slate-500 hover:text-blue-400 text-xs font-medium transition-colors">
@@ -216,3 +216,4 @@ export default function Contact() {
     </section>
   );
 }
+

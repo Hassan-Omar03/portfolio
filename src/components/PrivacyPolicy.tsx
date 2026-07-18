@@ -1,10 +1,10 @@
-import { ArrowLeft, Shield, Mail } from 'lucide-react';
+﻿import { ArrowLeft, Shield, Mail } from 'lucide-react';
 
 const sections = [
   {
     title: '1. Information We Collect',
     body: `When you use this website or reach out through the contact form, WhatsApp link, or email, we may collect the
-    information you voluntarily provide — such as your name, email address, phone number, and the contents of your
+    information you voluntarily provide â€” such as your name, email address, phone number, and the contents of your
     message. We also automatically collect limited technical data (browser type, device type, and general usage
     analytics) to help understand how visitors use the site.`,
   },
@@ -44,9 +44,9 @@ const sections = [
 
 export default function PrivacyPolicy() {
   return (
-    <section className="min-h-screen bg-[#050d1a] text-white relative overflow-hidden py-20">
-      <div className="absolute inset-0 grid-pattern opacity-50" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(59,130,246,0.08),transparent_60%)]" />
+    <section className="min-h-screen bg-[#0c0a0f] text-white relative overflow-hidden py-20">
+      <div className="absolute inset-0 opacity-40" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(181,101,242,0.10),transparent_60%)]" />
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-3xl">
         <a
@@ -58,7 +58,7 @@ export default function PrivacyPolicy() {
         </a>
 
         <div className="flex items-center gap-3 mb-4">
-          <div className="p-2.5 rounded-xl bg-gradient-to-br from-blue-600 to-teal-500 shadow-lg">
+          <div className="p-2.5 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 shadow-lg">
             <Shield className="w-5 h-5 text-white" />
           </div>
           <h1 className="text-3xl md:text-4xl font-bold">Privacy Policy</h1>
@@ -67,7 +67,7 @@ export default function PrivacyPolicy() {
 
         <div className="glass-card rounded-2xl p-6 sm:p-10 border border-white/5 space-y-8">
           <p className="text-slate-400 leading-relaxed text-sm sm:text-base">
-            This Privacy Policy explains how Mohammad Hassan ("I", "me") collects, uses, and protects information
+            This Privacy Policy explains how Muhammad Hassan ("I", "me") collects, uses, and protects information
             when you visit this portfolio website. By using this site, you agree to the practices described below.
           </p>
 
@@ -81,11 +81,11 @@ export default function PrivacyPolicy() {
           <div className="pt-6 border-t border-white/5">
             <h2 className="text-lg sm:text-xl font-semibold text-white mb-2">Contact</h2>
             <a
-              href="mailto:hassanomar7674@gmail.com"
-              className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors text-sm sm:text-base"
+              href="mailto:info@hassanomar.site"
+              className="inline-flex items-center gap-2 text-purple-400 hover:text-pink-300 transition-colors text-sm sm:text-base"
             >
               <Mail className="w-4 h-4" />
-              hassanomar7674@gmail.com
+              info@hassanomar.site
             </a>
           </div>
         </div>
@@ -93,3 +93,4 @@ export default function PrivacyPolicy() {
     </section>
   );
 }
+
