@@ -1,4 +1,5 @@
-User-agent: *
+﻿User-agent: *
 Allow: /
 
-Sitemap: https://hassanomar.site/sitemap.xml
+Sitemap: https://www.hassanomar.site/sitemap.xml
+
