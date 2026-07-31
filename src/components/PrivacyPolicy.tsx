@@ -1,10 +1,21 @@
 ﻿import { ArrowLeft, Shield, Mail } from 'lucide-react';
+import { useEffect } from 'react';
+
+const PAGE_TITLE = 'Privacy Policy | Muhammad Hassan';
+const PAGE_DESCRIPTION =
+  "Privacy Policy for Muhammad Hassan's portfolio website — how contact form, WhatsApp, and email information is collected, used, and protected.";
+const PAGE_URL = 'https://www.hassanomar.site/privacy-policy';
+
+function setMetaContent(selector: string, attr: string, value: string) {
+  const el = document.querySelector(selector);
+  if (el) el.setAttribute(attr, value);
+}
 
 const sections = [
   {
     title: '1. Information We Collect',
     body: `When you use this website or reach out through the contact form, WhatsApp link, or email, we may collect the
-    information you voluntarily provide â€” such as your name, email address, phone number, and the contents of your
+    information you voluntarily provide — such as your name, email address, phone number, and the contents of your
     message. We also automatically collect limited technical data (browser type, device type, and general usage
     analytics) to help understand how visitors use the site.`,
   },
@@ -43,6 +54,21 @@ const sections = [
 ];
 
 export default function PrivacyPolicy() {
+  useEffect(() => {
+    const previousTitle = document.title;
+    document.title = PAGE_TITLE;
+    setMetaContent('meta[name="description"]', 'content', PAGE_DESCRIPTION);
+    setMetaContent('link[rel="canonical"]', 'href', PAGE_URL);
+    setMetaContent('meta[property="og:title"]', 'content', PAGE_TITLE);
+    setMetaContent('meta[property="og:description"]', 'content', PAGE_DESCRIPTION);
+    setMetaContent('meta[property="og:url"]', 'content', PAGE_URL);
+    setMetaContent('meta[name="twitter:title"]', 'content', PAGE_TITLE);
+    setMetaContent('meta[name="twitter:description"]', 'content', PAGE_DESCRIPTION);
+    return () => {
+      document.title = previousTitle;
+    };
+  }, []);
+
   return (
     <section className="min-h-screen bg-[#0c0a0f] text-white relative overflow-hidden py-20">
       <div className="absolute inset-0 opacity-40" />
