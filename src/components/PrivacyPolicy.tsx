@@ -70,45 +70,44 @@ export default function PrivacyPolicy() {
   }, []);
 
   return (
-    <section className="min-h-screen bg-[#0c0a0f] text-white relative overflow-hidden py-20">
-      <div className="absolute inset-0 opacity-40" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(181,101,242,0.10),transparent_60%)]" />
+    <section className="min-h-screen bg-[var(--bg)] text-[var(--text)] relative overflow-hidden py-20">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,rgba(255,255,255,0.04),transparent_60%)] pointer-events-none" />
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10 max-w-3xl">
         <a
           href="/"
-          className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors mb-8"
+          className="inline-flex items-center gap-2 text-sm text-[var(--muted)] hover:text-[var(--text)] transition-colors mb-8"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Home
         </a>
 
         <div className="flex items-center gap-3 mb-4">
-          <div className="p-2.5 rounded-xl bg-gradient-to-br from-purple-600 to-pink-500 shadow-lg">
-            <Shield className="w-5 h-5 text-white" />
+          <div className="p-2.5 rounded-xl bg-[var(--p)]">
+            <Shield className="w-5 h-5 text-[var(--bg)]" />
           </div>
           <h1 className="text-3xl md:text-4xl font-bold">Privacy Policy</h1>
         </div>
-        <p className="text-slate-500 text-sm mb-10">Effective date: January 1, 2026</p>
+        <p className="text-[var(--muted)] text-sm mb-10">Effective date: January 1, 2026</p>
 
-        <div className="glass-card rounded-2xl p-6 sm:p-10 border border-white/5 space-y-8">
-          <p className="text-slate-400 leading-relaxed text-sm sm:text-base">
+        <div className="rounded-2xl p-6 sm:p-10 space-y-8 bg-[var(--card)] border border-[var(--line)]">
+          <p className="text-[var(--muted)] leading-relaxed text-sm sm:text-base">
             This Privacy Policy explains how Muhammad Hassan ("I", "me") collects, uses, and protects information
             when you visit this portfolio website. By using this site, you agree to the practices described below.
           </p>
 
           {sections.map((s) => (
             <div key={s.title}>
-              <h2 className="text-lg sm:text-xl font-semibold text-white mb-2">{s.title}</h2>
-              <p className="text-slate-400 leading-relaxed text-sm sm:text-base">{s.body}</p>
+              <h2 className="text-lg sm:text-xl font-semibold text-[var(--text)] mb-2">{s.title}</h2>
+              <p className="text-[var(--muted)] leading-relaxed text-sm sm:text-base">{s.body}</p>
             </div>
           ))}
 
-          <div className="pt-6 border-t border-white/5">
-            <h2 className="text-lg sm:text-xl font-semibold text-white mb-2">Contact</h2>
+          <div className="pt-6 border-t border-[var(--line)]">
+            <h2 className="text-lg sm:text-xl font-semibold text-[var(--text)] mb-2">Contact</h2>
             <a
               href="mailto:info@hassanomar.site"
-              className="inline-flex items-center gap-2 text-purple-400 hover:text-pink-300 transition-colors text-sm sm:text-base"
+              className="inline-flex items-center gap-2 text-[var(--p)] hover:text-[var(--text)] transition-colors text-sm sm:text-base"
             >
               <Mail className="w-4 h-4" />
               info@hassanomar.site
